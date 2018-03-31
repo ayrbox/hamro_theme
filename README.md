@@ -1,8 +1,9 @@
-Travis build: [![Build Status](https://travis-ci.org/understrap/understrap.svg?branch=master)](https://travis-ci.org/understrap/understrap)
+# Hamro Theme
+Theme for hamronepalko.com based on [Understrap](https://understrap.com/understrap)
 
 #### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
 
-# UnderStrap WordPress Theme Framework
+## UnderStrap WordPress Theme Framework
 
 Website: [https://understrap.com](https://understrap.com)
 
