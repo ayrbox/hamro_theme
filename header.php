@@ -27,11 +27,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
-	<div class="header-wrapper">
+
+
+	<div class="header-wrapper">  <!--top Header-->
 		<div class="container mb-3 mt-3">
 			<div class="row align-items-center">
-				<div class="col-sm-4">
-
+				<div class="col-sm-3">
 					<!-- Your site title as branding in the menu -->
 					<!-- TODO: Add theme option to display default logo or name ie. echo bloginfo('name') -->
 					<?php if ( ! has_custom_logo() ) { ?>
@@ -42,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<object data="<?php echo get_template_directory_uri(); ?>/images/logo.svg" type="image/svg+xml"></object>
 								</a>
 							</h1>
-							
+
 						<?php else : ?>
 
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">								
@@ -60,9 +61,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<!-- Woocommerce Product Search -->
 							<?php get_product_search_form(); ?>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-3">
 					<div class="support-text">
-							Support Email <!--TODO Add link -->							
+						Support: <a href="mailto:hamro@gmail.com">hamro@gmail.com  <!--TODO Add link -->							
+						</a>
 					</div>
 				</div>
 				<div class="col-sm-2">
@@ -75,20 +77,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 
 
-
-
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark sps data-sps-offset" data-sps-offset="200">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
 		<?php endif; ?>
 
-					
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">								
+					<object data="<?php echo get_template_directory_uri(); ?>/images/logo-light.svg" type="image/svg+xml"
+						height="32px"></object> <!--TODO: Handle if custom logo is used -->
+				</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>

@@ -20,3 +20,37 @@
   text-transform: uppercase;
   
 }
+
+
+#wrapper-navbar {
+  min-height:50.4px;
+}
+
+
+
+.navbar {
+
+  .navbar-brand {
+    display:none;
+  }
+
+  &.sps {
+    transition: all .5s ease;
+  }
+
+
+  &.sps--blw {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 3000;  
+
+    & .navbar-brand {
+      display: block;
+    }
+  }
+
+
+}
+

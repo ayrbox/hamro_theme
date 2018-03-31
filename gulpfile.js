@@ -190,6 +190,10 @@ gulp.task( 'scripts', function() {
 
         paths.dev + '/js/skip-link-focus-fix.js',
 
+
+        //Style Pos Styler
+        paths.dev + "/js/scrollpos-styler/scrollPosStyler.js",
+
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
         paths.dev + '/js/custom-javascript.js'
@@ -252,7 +256,17 @@ gulp.task( 'copy-assets', function() {
         .pipe( gulp.dest( paths.js + paths.vendor ) );
     gulp.src( paths.node + 'popper.js/dist/umd/popper.js' )
         .pipe( gulp.dest( paths.js + paths.vendor ) );
+
+
+// Copy scrollpos-styler  into source(dev) folder. The file is combined into theme.js
+    gulp.src( paths.node + "scrollpos-styler/scrollPosStyler.js" )
+        .pipe(gulp.dest( paths.dev +  "/js/scrollpos-styler/" ) );
+    
+    
     return stream;
+
+
+
 });
 
 // Deleting the files distributed by the copy-assets task
