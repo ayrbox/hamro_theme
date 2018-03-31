@@ -1,0 +1,22 @@
+.support-text {
+  padding-left: 50px;
+  position: relative;
+  
+  &:before {
+    color: #dfc250;
+    content: '\f0e0';
+    display: block;
+    font-family: FontAwesome;
+    font-size: 36px;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+  }
+
+  color: #595e6f;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+}

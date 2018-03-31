@@ -27,6 +27,56 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
+	<div class="header-wrapper">
+		<div class="container mb-3 mt-3">
+			<div class="row align-items-center">
+				<div class="col-sm-4">
+
+					<!-- Your site title as branding in the menu -->
+					<!-- TODO: Add theme option to display default logo or name ie. echo bloginfo('name') -->
+					<?php if ( ! has_custom_logo() ) { ?>
+						<?php if ( is_front_page() && is_home() ) : ?>
+
+							<h1 class="navbar-brand mb-0">
+								<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">								
+									<object data="<?php echo get_template_directory_uri(); ?>/images/logo.svg" type="image/svg+xml"></object>
+								</a>
+							</h1>
+							
+						<?php else : ?>
+
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">								
+								<object data="<?php echo get_template_directory_uri(); ?>/images/logo.svg" type="image/svg+xml"></object>
+							</a>
+
+						<?php endif; ?>
+
+
+						<?php } else {
+						the_custom_logo();
+						} ?><!-- end custom logo -->
+				</div>
+				<div class="col-sm-4">
+							<!-- Woocommerce Product Search -->
+							<?php get_product_search_form(); ?>
+				</div>
+				<div class="col-sm-2">
+					<div class="support-text">
+							Support Email <!--TODO Add link -->							
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="widget_shopping_cart_content">
+						<?php echo woocommerce_mini_cart();?>
+					</div>							
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
@@ -38,23 +88,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container" >
 		<?php endif; ?>
 
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-							
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-						
-						<?php endif; ?>
-						
 					
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
