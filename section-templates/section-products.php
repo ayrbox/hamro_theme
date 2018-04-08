@@ -1,6 +1,6 @@
 <div class="container">
- <div class="row justify-content-center">
-    <div class="col-4">
+ <div class="row justify-content-center mb-5 mt-5">
+    <div class="col-12 text-center">
       <h1>Our Products</h1>
     </div>
   </div>
