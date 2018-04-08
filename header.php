@@ -63,7 +63,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div class="col-sm-3">
 					<div class="support-text">
-						Support: <a href="mailto:hamro@gmail.com">hamro@gmail.com  <!--TODO Add link -->							
+						Email<br/>
+						<a href="mailto:customersupport@hamronepalko.com">
+							Customer Support
 						</a>
 					</div>
 				</div>
