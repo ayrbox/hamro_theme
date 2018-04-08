@@ -40,13 +40,13 @@ $container = get_theme_mod( 'understrap_container_type' );
           <h4 class='footer-heading'>Connect With Us</h4>
           <ul class="social-icons social-icons-footer">            
             <li>
-                <a href="http://facebook.com" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
+                <a href="https://www.facebook.com/Hamronepalkocom-214509059282140/" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
             </li>
             <li>
-                <a href="http://instagram.com" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+                <a href="https://www.instagram.com/hamronepalko/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
             </li>
             <li>
-                <a href="http://twitter.com" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+                <a href="https://twitter.com/hamronepalko" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
             </li>
           </ul>
         </div>
@@ -80,8 +80,6 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
     </div>
 	</div>
-
-
 
 </div><!-- wrapper end -->
 
