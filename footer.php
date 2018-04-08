@@ -59,13 +59,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 						Hamro Nepal Ko <br>
 						South East, London
           </address>
-					<div class="footer-contact contact-number">
+					<!-- <div class="footer-contact contact-number">
 						<i class="fa fa-phone fa-2x"></i>
 						<a href="tel:7508665459">7508665459</a>            
-					</div>
+					</div> -->
 					<div class="footer-contact contact-email">
 						<i class="fa fa-envelope fa-2x"></i>
-						<a href="mailto:hamro@gmail.com">hamro@gmail.com</a>
+						<a href="mailto:enquiry@hamronepalko.com">enquiry@hamronepalko.com</a>
 					</div>
         </div>
       </div>
