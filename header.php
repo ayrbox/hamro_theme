@@ -40,14 +40,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<h1 class="navbar-brand mb-0">
 								<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">								
-									<object data="<?php echo get_template_directory_uri(); ?>/images/logo.svg" type="image/svg+xml"></object>
+									<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" />									
 								</a>
 							</h1>
 
 						<?php else : ?>
 
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">								
-								<object data="<?php echo get_template_directory_uri(); ?>/images/logo.svg" type="image/svg+xml"></object>
+								<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo Dark background"/>
 							</a>
 
 						<?php endif; ?>
@@ -90,9 +90,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container" >
 		<?php endif; ?>
 
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">								
-					<object data="<?php echo get_template_directory_uri(); ?>/images/logo-light.svg" type="image/svg+xml"
-						height="32px"></object> <!--TODO: Handle if custom logo is used -->
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/logo-light.png" alt="Logo Dark Background" style="height:32px; width: auto;"/>
 				</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
