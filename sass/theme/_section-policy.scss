@@ -29,3 +29,16 @@
     text-transform: uppercase;
   }
 }
+
+
+
+@include media-breakpoint-up(sm) { 
+  .policy {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .icon {
+      top: 16px;
+    }
+  }
+}

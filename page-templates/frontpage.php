@@ -6,8 +6,8 @@
  */
 get_header();
   $sections = array(  
+    "products",
     "policy",
-    "products"
   );
 ?>
 
