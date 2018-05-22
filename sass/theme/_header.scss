@@ -30,9 +30,11 @@
 
 .navbar {
 
-  .navbar-brand {
-    display:none;
+  .navbar-brand.bg-dark {
+     display:none;
   }
+
+
 
   &.sps {
     transition: all .5s ease;
@@ -45,9 +47,13 @@
     left:0;
     right:0;
     z-index: 3000;  
+    background-color: #535353;
 
-    & .navbar-brand {
+    & .navbar-brand.bg-dark {
       display: block;
+    }
+    & .navbar-brand {
+      display: none;
     }
   }
 

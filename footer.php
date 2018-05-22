@@ -18,9 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<!-- FOOTER -->
   <footer class="footer-section">
     <div class="<?php echo esc_attr( $container ); ?>">
-      <div class="row">
-
-
+      <div class="row">      
         <div class="col-md-3">
           <h4 class="footer-heading">About</h4>
 					<?php wp_nav_menu(
