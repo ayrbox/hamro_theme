@@ -1,12 +1,9 @@
-
-
 .policy {
-  
   padding-left: 65px;
   padding-top: 70px;
   padding-bottom: 70px;
   position: relative;
-  
+
   .icon {
     left: 0;
     position: absolute;
@@ -30,9 +27,7 @@
   }
 }
 
-
-
-@include media-breakpoint-up(sm) { 
+@include media-breakpoint-up(sm) {
   .policy {
     padding-top: 16px;
     padding-bottom: 16px;

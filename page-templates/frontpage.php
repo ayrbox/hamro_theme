@@ -1,11 +1,11 @@
 <?php
 /**
  * Template Name: Front Page
- * 
+ *
  * Inspired by OnePress frontpage structure
  */
 get_header();
-  $sections = array(  
+  $sections = array(
     "products",
     "policy",
   );
@@ -15,8 +15,8 @@ get_header();
 
 <div class="wrapper-section" id="wrapper-index">
   <?php
-  foreach($sections as $section) {
-    get_template_part("section-templates/section", $section);
+  foreach ($sections as $section) {
+      get_template_part("section-templates/section", $section);
   }
   ?>
 </div>
