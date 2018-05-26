@@ -28,97 +28,33 @@ $container = get_theme_mod('understrap_container_type');
 
 <div class="hfeed site" id="page">
 
-
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite" class="header-wrapper sps data-sps-offset"  data-sps-offset="56">
-
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
-
-		<nav class="navbar navbar-expand-md">
-
-			<?php if ('container' == $container): ?>
-				<div class="container" >
-			<?php endif;?>
-
-				<a class="navbar-brand bg-dark" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/logo-light.png" alt="Logo Dark Background" style="height:32px; width: auto;"/>
-				</a>
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" style="height:32px; width:auto;" />
-				</a>
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-                    array(
-                        'theme_location' => 'primary',
-                        'container_class' => 'collapse navbar-collapse',
-                        'container_id' => 'navbarNavDropdown',
-                        'menu_class' => 'navbar-nav',
-                        'fallback_cb' => '',
-                        'menu_id' => 'main-menu',
-                        'walker' => new understrap_WP_Bootstrap_Navwalker(),
-                    )
-                );?>
-
-			<?php if ('container' == $container): ?>
-			</div><!-- .container -->
-			<?php endif;?>
-			<?php get_product_search_form();?>
-		</nav><!-- .site-navigation -->
-
-	<div class="header-wrapper">
-		<div class="container mb-3 mt-3">
-			<div class="row align-items-center">
-				<div class="col-sm-3">
-					<!-- Your site title as branding in the menu -->
-					<!-- TODO: Add theme option to display default logo or name ie. echo bloginfo('name') -->
-					<?php if (!has_custom_logo()) {
-                    ?>
-						<?php if (is_front_page() && is_home()): ?>
-
-							<h1 class="navbar-brand mb-0">
-
-							</h1>
-
-						<?php else: ?>
-
-
-						<?php endif; ?>
-
-						<?php
-                } else {
-                    the_custom_logo();
-                }?><!-- end custom logo -->
-				</div>
-				<div class="col-sm-4">
-							<!-- Woocommerce Product Search -->
-
-				</div>
-				<div class="col-sm-3">
-					<div class="support-text">
-						Email<br/>
-						<a href="mailto:customersupport@hamronepalko.com">
-							Customer Support
-						</a>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="widget_shopping_cart_content">
-						<?php echo woocommerce_mini_cart(); ?>
-					</div>
-				</div>
+	<header class="header-wrapper sps data-sps-offset" data-sps-offset="100">
+      <nav class="navbar navbar-expand-md">
+		<div class="container">
+			<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logo-light.png" alt="Logo Dark Background" style="height:32px; width: auto;"/>
+			</a>
+					
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamroNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<?php wp_nav_menu(
+                array(
+                    'theme_location' => 'primary',
+                    'container_class' => 'collapse navbar-collapse',
+                    'container_id' => 'hamroNav',
+                    'menu_class' => 'navbar-nav ml-auto',
+                    'fallback_cb' => '',
+                    'menu_id' => 'header-main-menu',
+                    'menu_item_class' => 'test',
+                    'walker' => new understrap_WP_Bootstrap_Navwalker(),
+                )
+            );?>
+			<div class="widget_shopping_cart_content">
+				<?php echo woocommerce_mini_cart(); ?>
 			</div>
+			<?php get_product_search_form();?>
 		</div>
-	</div>
-
-</div><!-- #wrapper-navbar end -->
-
-
-
-
-
-
+      </nav>
+    </header>
