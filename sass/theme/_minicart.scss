@@ -1,81 +1,69 @@
-.widget_shopping_cart_content .cart-toggler {
-  
-  a {
-    color: #595e6f;
-    display: block;
-    padding-left: 55px;
-    position: relative;
-  }
+$mini-cart-color: #fff;
 
+.widget_shopping_cart_content {
+  position: relative;
+  display: block;
+  max-width: 2em;
+  height: 0.5em;
 
-  &:hover a {
-    color: $primary;
-  }
-
-
-  .cart-icon {
-    left: 0;
-    position: absolute;
-    top: 50%;  
-    transform: translateY(-50%);
-
-
-    &::before {
-      content: '\f290';
-      display: inline-block;
+  .cart-toggler {
+    a {
+      color: $mini-cart-color;
       display: block;
-      font-family: FontAwesome;
-      font-size: 34px;
-      line-height: 1;
+      padding-left: 55px;
+      position: relative;
+    }
 
+    .cart-icon {
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &::before {
+        content: "\f290";
+        display: inline-block;
+        display: block;
+        font-family: FontAwesome;
+        font-size: 23px;
+        line-height: 1;
+      }
+    }
+
+    .cart-quantity {
+      background: #2cd746;
+      color: #fff;
+      display: block;
+      font-size: 0.7em;
+      height: 14px;
+      position: absolute;
+      right: -8px;
+      text-align: center;
+      top: -4px;
+      width: 14px;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+    }
+
+    .cart-title {
+      display: inline-block;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
-
-
-  .cart-quantity {
-    background: #dfc250;
-    color: #fff;
-    display: block;
-    font-size: 1em;
-    height: 24px;
-    position: absolute;
-    right: -15px;
-    text-align: center;
-    top: -4px;
-    width: 24px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-  }
-
-
-  .cart-title {
-    display: inline-block;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-
-  .cart-title strong {
-    display: block;
-  }
-
 }
 
-
-
-
-.widget_shopping_cart_content .mini_cart_content {    
-  height:0;
+.widget_shopping_cart_content .mini_cart_content {
+  height: 0;
   overflow: hidden;
   position: absolute;
   right: 0;
   text-align: left;
-  top: 100%;
-  z-index: 12000;  
-  transition: all .5s ease;  
-
+  top: 14px;
+  z-index: 12000;
+  transition: all 0.5s ease;
 
   .mini_cart_inner {
     background: #ffffff;
@@ -95,15 +83,18 @@
     overflow: hidden;
     padding: 0 0 20px 0;
     position: relative;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
-    &:first-child { padding-top: 0; }
-    &:last-child { 
-      border-bottom: none; margin-bottom: 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
     }
 
     .remove {
@@ -125,7 +116,6 @@
         color: $primary !important;
       }
     }
-
 
     a {
       color: #595e6f;
@@ -157,11 +147,7 @@
     .amount {
       color: #23232c;
     }
-
-
   }
-
-
 
   .total {
     border-top: 1px solid #e5e5e5;
@@ -177,7 +163,7 @@
       float: right;
     }
   }
-  
+
   .buttons {
     border-top: 1px solid #e5e5e5;
     display: block;
@@ -192,7 +178,7 @@
       font-size: 1em;
       font-weight: bold;
       height: 55px;
-      letter-spacing: .04em;
+      letter-spacing: 0.04em;
       line-height: 55px;
       margin: 0 10px 15px 10px;
       padding: 0;
@@ -228,13 +214,13 @@
   }
   .loading {
     background-color: #fff;
-    background-image: url('../images/loader.gif');
+    background-image: url("../images/loader.gif");
     background-position: center center;
     background-repeat: no-repeat;
     display: none;
     height: 100%;
     left: 0;
-    opacity: .7;
+    opacity: 0.7;
     position: absolute;
     top: 0;
     width: 100%;
@@ -242,7 +228,7 @@
   }
 
   &.loading .loading {
-    display:block;
+    display: block;
   }
 
   &:hover {

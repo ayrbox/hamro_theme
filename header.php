@@ -36,7 +36,7 @@ $container = get_theme_mod('understrap_container_type');
 			</a>
 					
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamroNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
 			</button>
 			
 			<?php wp_nav_menu(
@@ -51,10 +51,7 @@ $container = get_theme_mod('understrap_container_type');
                     'walker' => new understrap_WP_Bootstrap_Navwalker(),
                 )
             );?>
-			<div class="widget_shopping_cart_content">
-				<?php echo woocommerce_mini_cart(); ?>
-			</div>
-			<?php get_product_search_form();?>
+						
 		</div>
       </nav>
     </header>
