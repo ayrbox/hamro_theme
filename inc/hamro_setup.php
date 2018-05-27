@@ -27,10 +27,11 @@ function add_search_menu($item_output, $item)
 {
     if ('SEARCH' == $item->attr_title) {
         ob_start(); ?>
-            <li class="nav-item">
-                
-                    <?php get_product_search_form() ?>
-                
+            <li class="nav-item position-relative">
+                <a class="nav-search-toggler" href="#"></a>
+                <div class="nav-search-form">
+                    <?php get_product_search_form(); ?>
+                </div>
             </li>
         <?php
         $minicart_fragment = ob_get_clean();
