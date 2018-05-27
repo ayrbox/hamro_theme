@@ -2,10 +2,9 @@ $search-color: #fff;
 
 .nav-search-toggler {
   color: $search-color;
-  padding-left: 16px;
   position: relative;
-  left: 0;
-  transform: translateY(20%);
+  padding-top: 0;
+  padding-bottom: 0;
 
   &::before {
     content: "\f002";
