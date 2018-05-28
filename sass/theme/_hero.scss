@@ -1,0 +1,35 @@
+.carousel-item {
+  .page-carousel & {
+    height: calc(100vh - 20px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.8)
+      );
+    }
+
+    img {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+}
+
+.carousel-caption {
+  .page-carousel & {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
