@@ -1,4 +1,4 @@
-$dark-color: #343a40;
+$dark-color: #000;
 $text-color: #fff;
 
 .header-wrapper {
@@ -12,18 +12,23 @@ $text-color: #fff;
   border-bottom: 1px solid $text-color;
   color: $text-color;
   padding: 30px 0;
-  transition: all 0.3s linear 0.3s;
+  transition: all 0.2s linear 0.3s;
 
   &.sps--blw {
     border-bottom-color: transparent;
-    background-color: $dark-color;
+    background-color: $text-color;
     padding: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
 }
 
 .nav-item {
   .header-wrapper & {
     color: $text-color;
+  }
+
+  .header-wrapper.sps--blw & {
+    color: $dark-color;
   }
 }
 
@@ -32,9 +37,33 @@ $text-color: #fff;
     color: $text-color;
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
+    transition: color 0.2s linear 0.3s;
+  }
+
+  .header-wrapper.sps--blw & {
+    color: $dark-color;
   }
 
   .dropdown-menu .nav-item > & {
     color: $dark-color;
+  }
+}
+
+.navbar-brand {
+  .header-wrapper & {
+    img {
+      height: 40px;
+    }
+  }
+
+  .header-wrapper &.sps-alt {
+    display: none;
+  }
+
+  .header-wrapper.sps--blw & {
+    display: none;
+  }
+  .header-wrapper.sps--blw &.sps-alt {
+    display: block;
   }
 }

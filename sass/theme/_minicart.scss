@@ -18,6 +18,7 @@ $mini-cart-color: #fff;
       left: 0;
       position: absolute;
       transform: translateY(20%);
+      transition: color 0.2s linear 0.3s;
 
       &::before {
         content: "\f290";
@@ -232,4 +233,10 @@ $mini-cart-color: #fff;
 
 .widget_shopping_cart_content .cart-toggler:hover + .mini_cart_content {
   height: 500px;
+}
+
+.cart-icon {
+  .header-wrapper.sps--blw & {
+    color: #000;
+  }
 }

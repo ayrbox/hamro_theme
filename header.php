@@ -28,11 +28,14 @@ $container = get_theme_mod('understrap_container_type');
 
 <div class="hfeed site" id="page">
 
-	<header class="header-wrapper sps data-sps-offset" data-sps-offset="100">
+	<header class="header-wrapper sps data-sps-offset" data-sps-offset="200">
       <nav class="navbar navbar-expand-md">
 		<div class="container">
 			<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/logo-light.png" alt="Logo Dark Background" style="height:32px; width: auto;"/>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logo-light.png" alt="Logo Dark Background"/>
+			</a>
+			<a class="navbar-brand sps-alt" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo Dark Background"/>
 			</a>
 					
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamroNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
