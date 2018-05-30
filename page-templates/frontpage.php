@@ -6,6 +6,7 @@
  */
 get_header();
   $sections = array(
+    "collections",
     "products",
     "policy",
   );
