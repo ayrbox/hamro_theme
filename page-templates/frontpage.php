@@ -7,7 +7,7 @@
 get_header();
   $sections = array(
     "collections",
-    "products",
+    "featured",
     "policy",
   );
 ?>

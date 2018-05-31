@@ -41,3 +41,16 @@ function add_search_menu($item_output, $item)
 }
 
 add_filter('walker_nav_menu_start_el', 'add_search_menu', 10, 2);
+
+
+
+function hamro_do_shortcode($tag, array $atts = array(), $content = null)
+{
+    global $shortcode_tags;
+
+    if (! isset($shortcode_tags[ $tag ])) {
+        return false;
+    }
+
+    return call_user_func($shortcode_tags[ $tag ], $atts, $content, $tag);
+}
