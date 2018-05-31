@@ -8,6 +8,7 @@ get_header();
   $sections = array(
     "collections",
     "featured",
+    "blogs",
     "policy",
   );
 ?>

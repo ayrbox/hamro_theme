@@ -72,5 +72,8 @@ require get_template_directory() . '/inc/editor.php';
 
 
 
+require get_template_directory() . '/inc/hamro_functions.php';
+
+
 
 require get_template_directory() . '/inc/hamro_setup.php';
