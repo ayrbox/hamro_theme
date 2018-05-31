@@ -7,7 +7,7 @@
  * @package understrap
  */
 
-$container = get_theme_mod('understrap_container_type');
+$is_home_fix_header = (is_front_page() || is_home())?'':'fix-header';
 
 ?>
 <!DOCTYPE html>
@@ -24,11 +24,10 @@ $container = get_theme_mod('understrap_container_type');
 	<?php wp_head();?>
 </head>
 
-<body <?php body_class();?>>
+<body <?php body_class($is_home_fix_header);?>>
 
 <div class="hfeed site" id="page">
-
-	<header class="header-wrapper sps data-sps-offset" data-sps-offset="200">
+	<header class="header-wrapper sps data-sps-offset <?php echo $is_home_fix_header; ?>" data-sps-offset="200">
       <nav class="navbar navbar-expand-md">
 		<div class="container">
 			<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url">

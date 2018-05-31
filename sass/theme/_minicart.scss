@@ -236,7 +236,8 @@ $mini-cart-color: #fff;
 }
 
 .cart-icon {
-  .header-wrapper.sps--blw & {
+  .header-wrapper.sps--blw &,
+  .header-wrapper.fix-header & {
     color: #000;
   }
 }
