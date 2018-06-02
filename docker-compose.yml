@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+   db:
+     container_name: hamrodbcontainer
+     image: mariadb:latest
+     restart: unless-stopped     
+     environment:
+       MYSQL_ROOT_PASSWORD: rootpass
+       MYSQL_DATABASE: hamrodb_dev
+       MYSQL_USER: hamrouser
+       MYSQL_PASSWORD: hamropass
+
+   wordpress:
+     depends_on:
+       - db
+     container_name: hamrowebcontainer
+     image: wordpress:latest
+     restart: unless-stopped
+     ports:
+       - "8080:80"
+     volumes:       
+       - ./:/var/www/html/wp-content/themes/hamro_theme/
+     environment:
+       WORDPRESS_DB_HOST: hamrodbcontainer:3306
+       WORDPRESS_DB_NAME: hamrodb_dev
+       WORDPRESS_DB_USER: hamrouser
+       WORDPRESS_DB_PASSWORD: hamropass
+       WORDPRESS_TABLE_PREFIX: wp_
+
